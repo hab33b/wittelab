@@ -1,0 +1,1 @@
+# 0-config.R# configuration file## goal: reduce redundancy; create an abstraction layer that allows changes in one place# Every other file in the project will begin with source("0-config")# # file assume that users have opened the .Rproj file, # which sets the directory to the top level of the project.
