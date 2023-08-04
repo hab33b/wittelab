@@ -1,6 +1,10 @@
 ################################################################################
+# Thesis - Mendelian Randomization 
+# Adiposity and Prostate Cancer in Men of African Ancestry
+# 2023 Witte Lab
+# 
 # 0-run-figures
-#
+# --------------------
 # create figures from MR data
 ################################################################################
 
@@ -41,7 +45,7 @@ for (dat in harmonised_dats) {
 }
 
 #--------------------------------------------
-# rename plots
+# reconfigure plots
 #--------------------------------------------
 
 
@@ -49,11 +53,4 @@ for (dat in harmonised_dats) {
 # output plots
 #--------------------------------------------
 
-# hi ----
-sdfdf
-## jhhi ----
-sdfdfd
-### jhhi ----
-sdfdfd
-## jhhi ----
-sdfdfd
+

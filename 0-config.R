@@ -4,6 +4,7 @@
 # 2023 Witte Lab
 # 
 # 0-config.R
+# --------------------
 # Configuration file for loading variables and path specifications
 #  - Every other file in the project will begin with source("0-config.R")
 #  - file assume that users have opened the .Rproj file,

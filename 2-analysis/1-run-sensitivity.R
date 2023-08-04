@@ -1,6 +1,10 @@
 ################################################################################
+# Thesis - Mendelian Randomization 
+# Adiposity and Prostate Cancer in Men of African Ancestry
+# 2023 Witte Lab
+# 
 # 1-run-sensitivity
-#
+# --------------------
 # run different MR methods on harmonised datasets
 ################################################################################
 

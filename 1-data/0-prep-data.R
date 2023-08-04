@@ -1,6 +1,10 @@
 ################################################################################
-# 0-prep-data
+# Thesis - Mendelian Randomization 
+# Adiposity and Prostate Cancer in Men of African Ancestry
+# 2023 Witte Lab
 # 
+# 0-prep-data
+# --------------------
 # clean and manage data that will be used for MR analysis
 ################################################################################
 
