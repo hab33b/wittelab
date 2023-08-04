@@ -6,9 +6,8 @@
 
 rm(list=ls())
 source(here("0-config.R"))
-source(here("0-functions/0-functions.R"))
 
-harmonised_dats <- readRDS(here(harmonised_datas_path))
+harmonised_dats <- read_rds(here(harmonised_datas_path))
 
 # rename exposure column
 harmonised_dats <- replace_exp_column(harmonised_dats, "exposure")

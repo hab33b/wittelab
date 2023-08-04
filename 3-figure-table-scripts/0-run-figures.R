@@ -6,21 +6,22 @@
 
 rm(list=ls())
 source(here("0-config.R"))
-source(here("0-functions/0-functions.R"))
 
-harmonised_dats <- readRDS(here(harmonised_datas_path))
+harmonised_dats <- read_rds(here(harmonised_datas_path))
 
 # rename exposure column
 harmonised_dats <- replace_exp_column(harmonised_dats, "exposure")
 
-# Perform MR analysis & specify lines
+
+#--------------------------------------------
+# Create and aggregate all plots
+#--------------------------------------------
 scatter_plots <- list()
 forest_plots <- list()
 loo_plots <- list()
 funnel_plots <- list()
 method_list = c(main_analysis, "mr_egger_regression")
 
-# Create and aggregate all plots
 for (dat in harmonised_dats) {
   num_plot <- length(scatter_plots) + 1
   exposure <- names(harmonised_dats)[num_plot]
@@ -39,8 +40,20 @@ for (dat in harmonised_dats) {
   funnel_plots[[exposure]] <- mr_funnel_plot(mr_singlesnp(dat))
 }
 
+#--------------------------------------------
 # rename plots
+#--------------------------------------------
 
+
+#--------------------------------------------
 # output plots
+#--------------------------------------------
 
-
+# hi ----
+sdfdf
+## jhhi ----
+sdfdfd
+### jhhi ----
+sdfdfd
+## jhhi ----
+sdfdfd

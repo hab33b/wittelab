@@ -17,4 +17,4 @@ subsets <- list(bHa = bmi_hoff_afr,
                  bPa = bmi_page_afr,
                  bPH = bmi_page_hoff_snp)
 
-saveRDS(subsets, file = here(harmonised_datas_path))
+write_rds(subsets, file = here(harmonised_datas_path))
