@@ -6,36 +6,41 @@
 
 rm(list=ls())
 source(here("0-config.R"))
+source(here("0-functions/0-functions.R"))
 
-harmonised_datas <- readRDS(here(results_path, "harmonised-data.rds"))
-singlesnp_all <- readRDS(here(results_path, "singlesnp_analysis.rds"))
+harmonised_dats <- readRDS(here(harmonised_datas_path))
 
 # rename exposure column
-exposure.short <- names(harmonised_datas)
-for (i in seq_along(harmonised_datas)) {
-  harmonised_datas[[i]] <- 
-    harmonised_datas[[i]] %>% 
-    rename(exposure.long = exposure) %>%
-    mutate(exposure = exposure.short[i])
-}
-
-# Scatter plot ----
+harmonised_dats <- replace_exp_column(harmonised_dats, "exposure")
 
 # Perform MR analysis & specify lines
-mr_res_dats <- list()
 scatter_plots <- list()
 forest_plots <- list()
-method_list = c("mr_ivw_mre", "mr_egger_regression")
+loo_plots <- list()
+funnel_plots <- list()
+method_list = c(main_analysis, "mr_egger_regression")
 
-for (dat in harmonised_datas) {
-  res <- as.tibble(mr(dat, method_list = method_list))
-
+# Create and aggregate all plots
+for (dat in harmonised_dats) {
+  num_plot <- length(scatter_plots) + 1
+  exposure <- names(harmonised_dats)[num_plot]
+  
   # add scatter plots
-  scatter_plots[[length(scatter_plots) + 1]] <- mr_scatter_plot(res, dat)
+  mr_res <- as.tibble(mr(dat, method_list = method_list))
+  scatter_plots[[exposure]] <- mr_scatter_plot(mr_res, dat)
   
   # add forest plots
-  forst_plots[[length(scatter_plots) + 1]] <- mr_forest_plot(mr_singlesnp(dat))
+  forest_plots[[exposure]] <- mr_forest_plot(mr_singlesnp(dat))
+  
+  # add leave-one-out plots
+  loo_plots[[exposure]] <- mr_leaveoneout_plot(mr_leaveoneout(dat))
+  
+  # add funnel plots
+  funnel_plots[[exposure]] <- mr_funnel_plot(mr_singlesnp(dat))
 }
 
+# rename plots
+
+# output plots
 
 

@@ -19,7 +19,12 @@ library(tidyverse)
 library(TwoSampleMR)
 
 #--------------------------------------------
-# define harmonized data paths
+# load global variables
+#--------------------------------------------
+main_analysis = c("mr_ivw", "mr_ivw_mre")
+
+#--------------------------------------------
+# define harmonized data path
 #--------------------------------------------
 harmonised_path <- here::here("1-data/harmonised-data")
 
@@ -28,3 +33,4 @@ harmonised_path <- here::here("1-data/harmonised-data")
 #--------------------------------------------
 figures_path <- here::here("4-figures")
 results_path <- here::here("5-results")
+harmonised_datas_path <- here::here(results_path, "harmonised-all.rds")

@@ -1,14 +1,17 @@
 ################################################################################
-# 0-run-sensitivity
+# 1-run-sensitivity
 #
-# run Mendelian Randomization method on harmonised datasets
+# run different MR methods on harmonised datasets
 ################################################################################
 
 rm(list=ls())
 source(here("0-config.R"))
+source(here("0-functions/0-functions.R"))
 
-harmonised_datas <- readRDS(here(results_path, "harmonised-data.rds"))
-mr_results <- readRDS(here(results_path, "mr_results.rds"))
+harmonised_dats <- readRDS(here(harmonised_datas_path))
+
+# rename exposure column
+harmonised_dats <- replace_exp_column(harmonised_dats, "exposure")
 
 het_all <- list()
 pleio_all <- list()
@@ -16,24 +19,26 @@ singlesnp_all <- list()
 loo_all <- list()
 
 # Perform sensitivity analyses
-for (dat in harmonised_datas) {
+for (dat in harmonised_dats) {
+  num_dats <- length(het_all) + 1
   
   # Heterogeneity (Cochran's Q)
-  het_all[[length(het_all) + 1]] <- 
-    mr_heterogeneity(dat, method_list = c("mr_egger_regression","mr_ivw"))
+  het_all[[num_dats]] <- 
+    mr_heterogeneity(dat, method_list = c(main_analysis, "mr_egger_regression"))
   
   # Horizontal pleiotropy
-  pleio_all[[length(pleio_all) + 1]] <- mr_pleiotropy_test(dat)
+  pleio_all[[num_dats]] <- mr_pleiotropy_test(dat)
   
   # Single SNP analysis
-  singlesnp_all[[length(singlesnp_all) + 1]] <- mr_singlesnp(dat)
+  singlesnp_all[[num_dats]] <- mr_singlesnp(dat)
   
   # Leave-one-out analysis
-  loo_all[[length(loo_all) + 1]] <- mr_leaveoneout(dat)
+  loo_all[[num_dats]] <- mr_leaveoneout(dat)
 }
 
 bind_rows(het_all)
 bind_rows(pleio_all)
-# generate_odds_ratios(bind_rows(mr_results))
+# bind_rows(singlesnp_all) # not as useful combined, better to graph
+# bind_rows(loo_all)
 
-saveRDS(singlesnp_all, here(results_path, "singlesnp_analysis.rds"))
+
