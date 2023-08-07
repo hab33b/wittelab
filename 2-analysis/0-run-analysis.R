@@ -18,16 +18,10 @@ harmonised_dats <- replace_exp_column(harmonised_dats, "exposure")
 
 # Perform MR
 mr_res_all <- list()
-method_list = c(main_analysis,
-                "mr_two_sample_ml",
-                "mr_raps",
-                "mr_weighted_median",
-                "mr_egger_regression")
-for (dat in harmonised_dats) {
-  mr_res_all[[length(mr_res_all) + 1]] <- mr(dat, method_list = method_list) %>%
-                                          as.tibble()
+for (name in names(harmonised_dats)) {
+  dat <- harmonised_dats[[name]]
+  mr_res_all[[name]] <- mr(dat, method_list = all_method_list) %>% as.tibble()
 }
-names(mr_res_all) <- paste0("res_", names(harmonised_dats))
 
-# generate_odds_ratios(bind_rows(mr_results))
+write_rds(mr_res_all, file = here(mr_res_path))
 
