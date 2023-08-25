@@ -51,7 +51,7 @@ all_method_list = c(
 # pre-made harmonised data ----
 # if you are NOT using pre-made harmonized datasets that exist in the 
 # "harmonised-data" folder then change own_harmonised_data to false
-own_harmonised_data = F
+own_harmonised_data = T
 harmonised_dir <- here("1-data/harmonised-data")
 
 # preparing harmonised data from raw gwas data ----
