@@ -12,28 +12,40 @@ We used Mendelian Randomization to validate if there is a causal relationship be
 **`1-run-all.R`**: run this file to run all scripts in all subdirectories
 
 
-**0-functions** : folder containing function scripts
+**0-functions**
+-----
+folder containing function scripts
 * `0-functions.R`: script containing general functions used across the analysis
 
 
-**1-data** : folder containing data processing scripts. Run `0-run-data.R` to run all scripts in this subdirectory.
+**1-data**
+-----
+folder containing data processing scripts. Run `0-run-data.R` to run all scripts in this subdirectory.
 * `1-prep-data.R`: processes GWAS outcome and exposure data to process into a harmonized dataset. *Must set `own_harmonised_data=F` to run this file.*
 * `2-collect-data.R`: qc & process harmonized dataset, collects harmonized samples into a list
   * `harmonised-data`: pre-processed harmonized datasets
   * `harmonised-data-prep`: harmonized datasets processed by `1-prep-data.R`
 
 
-**2-analysis** : folder containing analysis scripts. Run `0-run-analysis.R` to rerun all scripts in this subdirectory.
+**2-analysis**
+-----
+folder containing analysis scripts. Run `0-run-analysis.R` to rerun all scripts in this subdirectory.
 * `1-run-MR.R`: run MR analysis
 * `2-run-sensitiivity.R`: run MR diagnostic tests
 
 
-**3-figure-table-scripts** : folder containing figure and table scripts. Run `0-run-results.R` to rerun all scripts in this subdirectory.
+**3-figure-table-scripts**
+-----
+folder containing figure and table scripts. Run `0-run-results.R` to rerun all scripts in this subdirectory.
 * `1-run-figures.R`: creates all MR plots (forest plot, scatter plot, funnel plot)
 * `2-run-tables.R`: creates all tables
 
 
-**4-figures** : folder containing figures. 
+**4-figures*
+-----
+folder containing figures. 
 
 
-**5-results** : folder containing analysis results.
+**5-results**
+-----
+folder containing analysis results.
