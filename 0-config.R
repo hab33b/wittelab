@@ -58,8 +58,10 @@ harmonised_dir <- here("1-data/harmonised-data")
 if (!own_harmonised_data) {
   harmonised_dir_prep <- here("1-data/harmonised-data-prep")
   gwas_dir            <- here("../gwas")
+  # exposure GWAS
   hoffman_path        <- here(gwas_dir, "BMI-GERA+GIANT-2018.tsv")
   page_path           <- here(gwas_dir, "invn_rbmi_alls.combined.page.out")
+  # outcome GWAS
   practical_path      <- here(gwas_dir, "ELLIPSE_V2_META_AFRICAN_Results_012121.txt")
 }
 

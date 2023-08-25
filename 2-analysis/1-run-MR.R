@@ -8,7 +8,7 @@
 # run Mendelian Randomization method on harmonised datasets
 ################################################################################
 
-# rm(list=ls())
+rm(list=ls())
 source(here("0-config.R"))
 
 #-----------------------------------------------------------------------

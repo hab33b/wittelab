@@ -8,7 +8,7 @@
 # create tables from MR data for the thesis paper
 ################################################################################
 
-# rm(list=ls())
+rm(list=ls())
 source(here("0-config.R"))
 
 #-----------------------------------------------------------------------
@@ -20,12 +20,9 @@ het_all <- read_rds(here(het_all_path)) # combined data frame
 pleio_all <- read_rds(here(pleio_all_path)) # combined data frame
 
 
-
 #-----------------------------------------------------------------------
 # Table 1: Exposure datasets
 #-----------------------------------------------------------------------
-
-
 dat <- tibble(
   Group = c(1, 2, 3, 4, 5),
   N = c(81278, 8322, 7290, 3069, 459),
@@ -58,7 +55,6 @@ dat <- tibble(
 
 dat %>%
   summarise(weighted_avg_bmi = sum(N * Mean_BMI) / sum(N))
-
 
 
 #-----------------------------------------------------------------------

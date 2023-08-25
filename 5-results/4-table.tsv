@@ -3,23 +3,23 @@ Hoffman_EUR	213	IVW (fe)	0.99	(0.84, 1.15)	0.85
 Hoffman_EUR	213	IVW (mre)	0.99	(0.84, 1.15)	0.85
 Hoffman_EUR	213	ML	0.98	(0.84, 1.15)	0.85
 Hoffman_EUR	213	RAPS	0.98	(0.83, 1.15)	0.81
-Hoffman_EUR	213	WME	1.01	(0.80, 1.29)	0.93
+Hoffman_EUR	213	WME	1.01	(0.79, 1.29)	0.93
 Hoffman_EUR	213	MR Egger	0.98	(0.61, 1.55)	0.92
 Hoffman_AFR	439	IVW (fe)	0.99	(0.89, 1.10)	0.88
 Hoffman_AFR	439	IVW (mre)	0.99	(0.89, 1.10)	0.88
 Hoffman_AFR	439	ML	0.99	(0.89, 1.10)	0.88
 Hoffman_AFR	439	RAPS	0.99	(0.89, 1.11)	0.86
-Hoffman_AFR	439	WME	0.96	(0.81, 1.14)	0.64
+Hoffman_AFR	439	WME	0.96	(0.80, 1.15)	0.65
 Hoffman_AFR	439	MR Egger	0.88	(0.65, 1.19)	0.41
 PAGE_AFR	14	IVW (fe)	0.85	(0.66, 1.09)	0.2
 PAGE_AFR	14	IVW (mre)	0.85	(0.66, 1.10)	0.22
 PAGE_AFR	14	ML	0.85	(0.66, 1.10)	0.21
 PAGE_AFR	14	RAPS	0.83	(0.64, 1.08)	0.17
-PAGE_AFR	14	WME	0.87	(0.62, 1.23)	0.44
+PAGE_AFR	14	WME	0.87	(0.62, 1.22)	0.42
 PAGE_AFR	14	MR Egger	0.51	(0.21, 1.22)	0.16
 PAGE_Hoffman	160	IVW (fe)	0.99	(0.84, 1.16)	0.88
 PAGE_Hoffman	160	IVW (mre)	0.99	(0.85, 1.15)	0.88
 PAGE_Hoffman	160	ML	0.99	(0.84, 1.16)	0.88
 PAGE_Hoffman	160	RAPS	0.98	(0.82, 1.17)	0.83
-PAGE_Hoffman	160	WME	1.02	(0.79, 1.33)	0.87
+PAGE_Hoffman	160	WME	1.02	(0.80, 1.31)	0.86
 PAGE_Hoffman	160	MR Egger	0.82	(0.56, 1.20)	0.31

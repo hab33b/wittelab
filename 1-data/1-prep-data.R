@@ -10,7 +10,7 @@
 # to use this file, change own_harmonised_data variable to FALSE
 ################################################################################
 
-# rm(list=ls())
+rm(list=ls())
 source(here("0-config.R"))
 
 #-----------------------------------------------------------------------

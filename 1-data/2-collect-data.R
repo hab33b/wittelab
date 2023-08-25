@@ -8,7 +8,7 @@
 # perform qc on harmonized datasets and coalesce all studies into 1 list
 ################################################################################
 
-# rm(list=ls())
+rm(list=ls())
 source(here("0-config.R"))
 
 
