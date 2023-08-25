@@ -12,7 +12,7 @@ We used Mendelian Randomization to validate if there is a causal relationship be
 **`1-run-all.R`**: run this file to run all scripts in all subdirectories
 
 
-**0-functions**
+####**0-functions**
 -----
 folder containing function scripts
 * `0-functions.R`: script containing general functions used across the analysis
