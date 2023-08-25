@@ -17,7 +17,7 @@ loads required libraries, sets raw data directories & other paths, sources funct
 * `0-functions.R`: script containing general functions used across the analysis
 
 **`1-data`** : folder containing data processing scripts. Run `0-run-data.R` to run all scripts in this subdirectory.
-* `1-prep-data.R`: processes GWAS outcome and exposure data to process into a harmonized dataset
+* `1-prep-data.R`: processes GWAS outcome and exposure data to process into a harmonized dataset. Must set `own_harmonised_data=F` to run this file.
 * `2-collect-data.R`: qc & process harmonized dataset, collects harmonized samples into a list
   * `harmonised-data`: pre-processed harmonized datasets
   * `harmonised-data-prep`: harmonized datasets processed by `1-prep-data.R`
