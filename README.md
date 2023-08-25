@@ -41,8 +41,8 @@ folder containing figure and table scripts. Run `0-run-results.R` to rerun all s
 * `2-run-tables.R`: creates all tables
 
 
-**4-figures*
------
+**4-figures**
+--
 folder containing figures. 
 
 
