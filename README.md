@@ -1,52 +1,35 @@
-# THESIS
-# Habeeb Jimoh - Witte Lab 2023
-# Adiposity and Risk of Prostate Cancer among those of African Ancestry Using Mendelian Randomization
+## Adiposity and Risk of Prostate Cancer among those of African Ancestry Using Mendelian Randomization
+THESIS
+Habeeb Jimoh - Witte Lab 2023
 
-Acknowledgement: Many thanks to Dr. Kachuri for providing alot of the resources in creating the code for this analysis
+Acknowledgements: Many thanks to Dr. Kachuri for providing alot of the resources in creating the code for this analysis
 
-## Overview
-We used Mendelian Randomization to validate if there is a causal relationship between BMI and prostate cancer in different ancestries
+### Overview
+We used Mendelian Randomization to validate if there is a causal relationship between BMI and prostate cancer in different ancestries.
 
-### Directory structure
+### Directory
 
 **`0-config.R`** : configuration file 
 loads required libraries, sets raw data directories & other paths, sources functions
 
-**`0-base-functions`** : folder containing scripts with functions used in the analysis
-* `0-base-functions.R`: R script containing general functions used across the analysis
-* `0-bias-corr-functions.R`: R script containing functions used in bias correction
-* `0-bias-corr-functions-undertesting.R`: R script containing functions used in bias correction to estimate the percentage of underestimation due to incomplete testing vs. imperfect test accuracy
-* `0-prior-functions.R`: R script containing functions to generate priors
+**`0-functions`** : folder containing function scripts
+* `0-functions.R`: script containing general functions used across the analysis
 
-**`1-data`** : folder containing data processing scripts
-NOTE: some scripts are deprecated
+**`1-data`** : folder containing data processing scripts. Run `0-run-data.R` to run all scripts in this subdirectory.
+* `1-prep-data.R`: processes GWAS outcome and exposure data to process into a harmonized dataset
+* `2-collect-data.R`: qc & process harmonized dataset, collects harmonized samples into a list
+  * `harmonised-data`: pre-processed harmonized datasets
+  * `harmonised-data-prep`: harmonized datasets processed by `1-prep-data.R`
 
-**`2-analysis`** : folder containing analysis scripts. To rerun all scripts in this subdirectory, run the bash script `0-run-analysis.sh`.
+**`2-analysis`** : folder containing analysis scripts. Run `0-run-analysis.R` to rerun all scripts in this subdirectory.
+* `1-run-MR.R`: run MR analysis
+* `2-run-sensitiivity.R`: run MR diagnostic tests
 
-* `1-obtain-priors-state.R`: obtain priors for each state
-* `2-est-expected-cases-state.R`: estimate expected cases in each state
-* `3-est-expected-cases-state-perf-testing.R`: estimate expected cases in each state, estimate the percentage of underestimation due to incomplete testing vs. imperfect test accuracy
-* `4-obtain-testing-protocols.R`: find testing protocols for each state.
-* `5-summarize-results.R`: summarize results; obtain results for in text numerical results. 
+**`3-figure-table-scripts`** : folder containing figure and table scripts. Run `0-run-results.R` to rerun all scripts in this subdirectory.
 
-**`3-figure-table-scripts`** : folder containing figure scripts. To rerun all scripts in this subdirectory, run the bash script `0-run-figs.sh`.
+* `1-run-figures.R`: creates all MR plots (forest plot, scatter plot, funnel plot)
+* `2-run-tables.R`: creates all tables
 
-* `1-fig-testing.R`: creates plot of testing patterns by state over time
-* `2-fig-cases-usa-state-bar.R`: creates bar plot of confirmed vs. estimated infections by state
-* `3a-fig-map-usa-state.R`: creates map of confirmed vs. estimated infections by state
-* `3b-fig-map-usa-state-shiny.R`: creates map of confirmed vs. estimated infections by state with search functionality by state
-* `4-fig-priors.R`: creates figure with priors for US as a whole
-* `5-fig-density-usa.R`: creates figure of distribution of estimated cases in the US 
-* `6-table-data-quality.R`: creates table of data quality grading from COVID Tracking Project
-* `7-fig-testpos.R`: creates figure of the probability of testing positive among those tested by state
-* `8-fig-percent-undertesting-state.R`: creates figure of the percentage of under estimation due to incomplete testing
+**`4-figures`** : folder containing figures. 
 
-**`4-figures`** : folder containing figure files. 
-
-**`5-results`** : folder containing analysis results objects. 
-
-**`6-sensitivity`** : folder containing scripts to run the sensitivity analyses
-
-Contributors: Jade Benjamin-Chung, Sean L. Wu, Anna Nguyen, Stephanie Djajadi, Nolan N. Pokpongkiat, Anmol Seth, Andrew Mertens
-
-Wu SL, Mertens A, Crider YS, Nguyen A, Pokpongkiat NN, Djajadi S, et al. Substantial underestimation of SARS-CoV-2 infection in the United States due to incomplete testing and imperfect test accuracy. medRxiv. 2020; 2020.05.12.20091744. [doi:10.1101/2020.05.12.20091744](https://doi.org/10.1101/2020.05.12.20091744)
+**`5-results`** : folder containing analysis results.
