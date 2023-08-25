@@ -1,5 +1,0 @@
-exposure	nsnp	method	or	CI	pval	β0	p_plt	p_het
-Hoffman_EUR	213	IVW (fe)	0.99	(0.84, 1.15)	0.85	2e-4	0.97	0.44
-Hoffman_AFR	439	IVW (fe)	0.99	(0.89, 1.10)	0.88	0.0029	0.41	0.51
-PAGE_AFR	14	IVW (fe)	0.85	(0.66, 1.09)	0.2	0.0285	0.26	0.39
-PAGE_Hoffman	160	IVW (fe)	0.99	(0.84, 1.16)	0.88	0.0053	0.29	0.7
