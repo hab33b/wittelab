@@ -18,8 +18,7 @@ We used Mendelian Randomization to validate if there is a causal relationship be
 
 
 **`1-data`** : folder containing data processing scripts. Run `0-run-data.R` to run all scripts in this subdirectory.
-* `1-prep-data.R`: processes GWAS outcome and exposure data to process into a harmonized dataset. 
-```Must set `own_harmonised_data=F` to run this file.```
+* `1-prep-data.R`: processes GWAS outcome and exposure data to process into a harmonized dataset. _Must set `own_harmonised_data=F` to run this file._
 * `2-collect-data.R`: qc & process harmonized dataset, collects harmonized samples into a list
   * `harmonised-data`: pre-processed harmonized datasets
   * `harmonised-data-prep`: harmonized datasets processed by `1-prep-data.R`
