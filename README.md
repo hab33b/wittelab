@@ -9,6 +9,7 @@ We used Mendelian Randomization to validate if there is a causal relationship be
 
 ### Directory
 **`0-config.R`** : configuration file, loads required libraries, sets raw data directories & other paths, sources functions.
+
 **`1-run-all.R`**: run this file to run all scripts in all subdirectories.
 
 
